@@ -1,10 +1,10 @@
 OUTPUT_NAME=tcpbug
 
-build-release:
-	go build -o $(OUTPUT_NAME) --ldflags '-extldflags "-static"'
-
-build-dev:
+build:
 	go build -o $(OUTPUT_NAME) 
+
+run: build
+	./$(OUTPUT_NAME)
 
 clean:
 	rm $(OUTPUT_NAME)
